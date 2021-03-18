@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: rgb(184, 200, 211);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5;
+}
+
+.sidebar{
+    background: rgb(240, 230, 230);
+    grid-area: b1;
+    }
+
+span{
+    color: rgb(241, 110, 110);
+}
+
+.sidebar-header{
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(29,41,54);
+}
+
+.links a{
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: rgb(22, 74, 122);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.links a:hover{
+    background: rgb(189, 152, 74);
+    padding-left: 1.75rem;
+}
+
+.heading{
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    background:rgb(233, 241, 248);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    grid-area: b2;
+    
+}
+.calculator{
+    display: block;
+   background: rgb(233, 241, 248);
+   font-size: 1.2rem;
+   text-align: center;
+   text-transform: initial;
+   transition: all 0.3s linear;
+   cursor: pointer;
+   grid-area: b3;
+
+}
+.calculator:hover{
+    background: rgb(189, 152, 74);
+    
+}
+
+.add1{
+    background: rgb(206, 211, 206);
+    grid-area: b4;
+    align-items: center;
+}
+
+.add2{
+    background: rgb(197, 224, 243);
+    grid-area: b5;
+}
+
+.footer{
+    background:rgb(49,64,78);
+    grid-area: b6;
+}
+
+
+.container{
+    width: 99%;
+    height: 100vh;
+    display: grid;
+    margin: auto;
+    padding: 5px;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: 'b1 b1 b2 b2 b2 b4'
+    'b1 b1 b3 b3 b3 b4' 'b1 b1 b3 b3 b3 b4''b1 b1 b3 b3 b3 b5''b1 b1 b3 b3 b3 b5''b1 b1 b3 b3 b3 b5'
+    'b1 b1 b6 b6 b6 b6';
+    grid-gap: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    box-sizing:border-box;
+}
+.btn-warning:hover {
+    background-color:red;
+  }
