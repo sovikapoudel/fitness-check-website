@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <script src= "index.js"></script>
     <!-- <script type ="text/javascript" src="web.js"></script> -->
     <div class="container">
         <div class="sidebar">
@@ -29,18 +30,19 @@
             <h4 class="head"> <button type="button" class="btn btn-warning">Select the option below to calculate</button></h4>
         </div>
         <div class ="calculator">
-            <ul>
-                <li><a href="#">Body Mass Index  Calculator</a>
-                    <h6><p> Height in centimenter</p> 
-                        <input type = "text" id = "height">
+            <ul><form name ="bmi">
+                <a href="#">Body Mass Index </a><br>
+                    <h6><p> Height in cm</p> 
+                        <input type = "number" id = "height">
                         <p> Weight in pounds</p> 
-                        <input type = "text" id = "weight">
-                        <button class ="btn-warning" id="btn"> Calculate </button>
+                        <center> <input type = "number" id = "weight"></center> <br>
+                        <button class ="btn-warning" id="btn" Value = "Calculate BMI" onClick="CalculateBmi()"> Calculate BMI  </button>
                         <!-- <div>id= "result"></div> -->
                     </h6> 
-                <li><a href="#">Body Fat Percentage</a> 
+                <!-- <li><a href="#">Body Fat Percentage</a> 
                 <li><a href="#">Ideal Body Weight</a> 
-                <li><a href="#">Healthy Heart Rate</a> 
+                <li><a href="#">Healthy Heart Rate</a>  -->
+                </form>
             </ul>
         </div>
         <div class="add1">
