@@ -12,6 +12,8 @@
 
 <body>
     <script src= "index.js"></script>
+    <div id="fb-root"></div>
+
     <!-- <script type ="text/javascript" src="web.js"></script> -->
     <div class="container">
         <div class="sidebar">
@@ -30,36 +32,79 @@
             <h4 class="head"> <button type="button" class="btn btn-warning">Select the option below to calculate</button></h4>
         </div>
         <div class ="calculator">
-            <ul><form name ="bmi">
-                <a href="#">Body Mass Index </a><br>
-                    <h6><p> Height in cm</p> 
-                        <input type = "number" id = "height">
-                        <p> Weight in pounds</p> 
-                        <center> <input type = "number" id = "weight"></center> <br>
-                        <button class ="btn-warning" id="btn" Value = "Calculate BMI" onClick="CalculateBmi()"> Calculate BMI  </button>
-                        <!-- <div>id= "result"></div> -->
-                    </h6> 
-                <!-- <li><a href="#">Body Fat Percentage</a> 
-                <li><a href="#">Ideal Body Weight</a> 
-                <li><a href="#">Healthy Heart Rate</a>  -->
+            <p>
+                <ul class = "text"> <a> <strong>  Calculate your BMI</strong></ul></a>
+                    <form name="bmicalculator">
+                        <table>
+                            <th>
+                            <tr>Your Weight(kg): </tr> <input type="number" name="weight" size="10"><br />
+                            <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
+                            <input type="button" value="Calculate BMI" onClick="CalculateBmi()"><br />
+                            <tr> BMI: </tr>  <input type="text" name="bmi" size="10"><br />
+                            This Means: <input type="text" name="meaning" size="25">
+                            <input type="reset" value="Reset" />
+                        </th>
+                        </table>
+                        
+                    </form>
+                </ul>    
+            </p>     
+            <p>
+                <ul class = "text"> <a> <strong>  Calculate your Body Fat Percentage</strong></ul></a>
+                    <form name="bfpcalculator">
+                        Your BMI: <input id="bfp-bmi" type="number" name="BMI"  size="10"><br />
+                        Your Age (cm): <input type="number" name="age" size="10"><br />
+                        Your Gender: <li><input type="radio" name="gender" value= "male" size="10"> Male<br /> </li>
+                           <li> <input type="radio" name="gender" value= "female" size="10">Female<br /></li> 
+                        <input type="button" value="Calculate Body Fat Percentage" onClick="CalculateBodyFatPercentage()"><br />
+                        Your Body fat percentage: <input type="text" name="bfp" size="10"><br />
+                        This Means: <input type="text" name="meaning" size="25">
+                        <input type="reset" value="Reset" />
+                    </form>
+                </ul>
+            </p>  
+            
+            <ul class = "text"> <a> <strong>  Calculate your Body Fat Percentage</strong></ul></a></p> 
+            <form>
+                <label for="weight">Weight</label> <input class="textbox" name="weight" type="number" id="weight"> kg <br><br>
+               </form>
+                Height <input class="textbox" type="number" id="height"> cm <br><br>
+                Waist <input class="textbox" type="number" id="waist"> cm <br><br>
+                Age <input class="textbox" type="number" id="age"> years <br><br>
+                Gender <input type="radio" name="gender" value="male" onchange="sexcm();calc();" > Male 
+                <input type="radio" name="gender"  value="female" onchange="sexcf();calc();"> Female 
+                 <br><br>
+               <input type = "button"
+                              id = "calc"
+                              value = "Calculate" onclick="calc()" /> 
+                   <input type = "button"
+                              id = "reset"
+                              value = "Reset" onclick="reset()" /> <br><br>
+               <label>Body Fat</label>
+                       <input class="textbox" type = "number"
+                              id = "bodyfat"
+                              value = "0" /> %<br><br>
+               <label>Lean Body Mass</label>
+                       <input class="textbox" type = "number"
+                              id = "leanbodymass"
+                              value = "0" /> kg<br>
                 </form>
             </ul>
         </div>
         <div class="add1">
             <ul>
-                <li>
-                    Account <br> History <br> Sign in/ Sign out
-                </li>
+                <li>Account</li>
+                <li>History </li> 
+                <li>Sign in/ Sign out</li>
+            
             </ul>
-           
-
-
+            
         </div>
 
         <div class="add2"></div>
         <div class="footer"></div>
 
     </div>
-    
+
 </body>
 </html>

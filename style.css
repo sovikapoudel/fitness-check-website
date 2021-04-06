@@ -11,6 +11,14 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.5;
 }
+.text{
+    background-color: aliceblue;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 2em;
+    color: blue;
+}
 
 .sidebar{
     background: rgb(240, 230, 230);
@@ -18,7 +26,7 @@ body{
     }
 
 span{
-    color: rgb(241, 110, 110);
+    color: rgb(187, 173, 173);
 }
 
 .sidebar-header{
@@ -52,6 +60,18 @@ span{
     grid-area: b2;
     
 }
+table{
+  
+    font-size: 1.3 rem;
+    text-align: left;
+}
+td, th {
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    
+}
+
 .calculator{
     display: block;
    background: rgb(233, 241, 248);
@@ -64,7 +84,7 @@ span{
 
 }
 .calculator:hover{
-    background: rgb(189, 152, 74);
+    background: rgb(175, 173, 168);
     
 }
 
@@ -101,6 +121,7 @@ span{
     border-radius: 10px;
     box-sizing:border-box;
 }
+
 .btn-warning:hover {
     background-color:red;
   }
