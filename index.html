@@ -80,6 +80,26 @@
                               id = "leanbodymass"
                               value = "0" /> kg<br>
                 </form>
+ <script>
+        let movies = [];
+            ev.preventDefault();  
+            let movie = {
+                id: Date.now(),
+                title: document.getElementById('calc').value,
+                year: document.getElementById('reset').value
+            }
+            movies.push(movie);
+            document.forms[0].reset(); 
+            console.warn('added' , {movies} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+
+            localStorage.setItem('MyMovieList', JSON.stringify(movies) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+    </script>
             </ul>
         </div>
         <div class="add1">
