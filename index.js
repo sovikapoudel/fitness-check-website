@@ -1,6 +1,27 @@
 // alert("Please Click 'OK' to continue");
 
             var finalBmi
+             function CalculateBodyFatPercentage(){
+                var age = document.bfpcalculator.age.value
+                //  var gender = document.bfpcalculator.gender.value
+                if (age>0 ); 
+                // && gender==male or female (need to add this part)
+                    finalbfp = 1.20*finalBmi+(0.23*age)-16.2
+                    // this calculation is for male
+                    document.bfpcalculator.bfp.value = finalbfp
+
+                        if( finalbfp > 8 && finalbfp < 19 ){
+                            document.bfpcalculator.meaning.value = "Your body fat percentage is too high "
+                        }
+                        if( finalbfp > 19){
+                            document.bfpcalculator.meaning.value = "Your body fat percentage is too high "
+                        }
+
+                else{
+                            alert("Please provide the correct information!");
+                        }
+
+             }
             
             function CalculateBmi() {
                 var weight = document.bmicalculator.weight.value
@@ -24,30 +45,6 @@
                 }
             }
 
-            function CalculateBodyFatPercentage(){
-                var age = document.bfpcalculator.age.value
-                //  var gender = document.bfpcalculator.gender.value
-                if (age>0 ); 
-                // && gender==male or female (need to add this part)
-                    finalbfp = 1.20*finalBmi+(0.23*age)-16.2
-                    // this calculation is for male
-                    document.bfpcalculator.bfp.value = finalbfp
-
-                        if( finalbfp > 8 && finalbfp < 19 ){
-                            document.bfpcalculator.meaning.value = "Your body fat percentage is too high "
-                        }
-                        if( finalbfp > 19){
-                            document.bfpcalculator.meaning.value = "Your body fat percentage is too high "
-                        }
-
-                else{
-                            alert("Please provide the correct information!");
-                        }
-
-                
-                    
-
-            }
 
             
             var waist = document.getElementById("waist");
