@@ -1,4 +1,4 @@
-<style>
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -51,14 +51,8 @@
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-
-  color: white;
-}
-
-
-
 .fa-rss {
   background: #ff6600;
   color: white;
 }
-</style>
+
