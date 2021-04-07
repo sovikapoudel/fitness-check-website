@@ -107,8 +107,10 @@ td, th {
 }
 
 .footer{
-    background:rgb(49,64,78);
+  background:rgb(236, 75, 11);
     grid-area: b6;
+   font-size: x-large;
+   font-weight: 200;
 }
 
 
