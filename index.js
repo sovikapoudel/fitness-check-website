@@ -79,10 +79,28 @@
             }
             document.getElementById("bodyfat").value =finalBmi.toFixed(2)
 
-
-            
-            var waist = document.getElementById("waist");
-            var height = document.getElementById("height");
-            var waist = document.getElementById("waist");
-            var age = document.getElementById("age");
            
+            let movies = [];
+            ev.preventDefault();  
+            let movie = {
+                id: Date.now(),
+                title: document.getElementById('calc').value,
+                year: document.getElementById('reset').value
+            }
+            movies.push(movie);
+            document.forms[0].reset(); 
+            console.warn('added' , {movies} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+
+            localStorage.setItem('MyMovieList', JSON.stringify(movies) );
+        
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+        var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

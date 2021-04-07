@@ -23,8 +23,7 @@ body{
 
 .sidebar{
     background: rgb(241, 234, 234);
-    grid-area: b1;
-    }
+}
 
 span{
     color: rgb(151, 28, 28);
@@ -55,10 +54,8 @@ span{
     font-size: 3.5rem;
     text-transform: capitalize;
     background: rgb(233, 241, 248);
-    display: grid;
     place-items: center;
     align-items: center;
-    grid-area: b2;
     background-image: url(background-image.jpeg);
     
 }
@@ -76,13 +73,12 @@ td, th {
 
 .calculator{
     display: block;
-   background: rgb(233, 241, 248);
-   font-size: 1.2rem;
-   text-align: center;
-   text-transform: initial;
-   transition: all 0.3s linear;
-   cursor: pointer;
-   grid-area: b3;
+    background: rgb(233, 241, 248);
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: initial;
+    transition: all 0.3s linear;
+    cursor: pointer;
 
 }
 .calculator:hover{
@@ -91,7 +87,6 @@ td, th {
 }
 
 .add1{
-    grid-area: b4;
     align-items: center;
     background:none;
     display: block;
@@ -104,7 +99,6 @@ td, th {
 }
 
 .add2{
-    grid-area: b5;
     font-size: small;
     align-items: center;
 
@@ -112,31 +106,16 @@ td, th {
 
 .footer{
     background:rgb(233, 24, 17);
-    grid-area: b6;
     font-size: 1.5rem;
     font-weight: 200;
     color: aliceblue;
     align-items: center;
+    width: 100%;
+    height: 36px;
 }
 
-.container{
-    width: 99%;
-    height: 100vh;
-    display: grid;
-    margin: auto;
-    padding: 5px;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(6,1fr);
-    grid-template-areas: 'b1 b1 b2 b2 b2 b4'
-    'b1 b1 b3 b3 b3 b4' 'b1 b1 b3 b3 b3 b4''b1 b1 b3 b3 b3 b5''b1 b1 b3 b3 b3 b5''b1 b1 b3 b3 b3 b5'
-    'b1 b1 b6 b6 b6 b6';
-    grid-gap: 2px;
-    border-radius:10px;
-    box-sizing:border-box;
-    background-image: url(background-image.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    
+.content-container{
+    height: calc(100vh-36px);
     
 }
 

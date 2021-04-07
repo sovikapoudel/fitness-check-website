@@ -1,197 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness</title>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="login.css">
-    <script src="bootstrap.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="social.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness</title>
+  <link rel="stylesheet" href="bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+  <script src="bootstrap.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="social.css">
 </head>
 
 <body>
-    
-    <script src="index.js"></script>
-    <div id="fb-root"></div>
 
-    <!-- <script type ="text/javascript" src="web.js"></script> -->
-    <div class="container">
-        
-          
+  <script src="index.js"></script>
+  <div id="fb-root"></div>
+
+  <!-- <script type ="text/javascript" src="web.js"></script> -->
+  <div class="container-fluid content-container">
+    <div class="row"> 
+      <div class="col">
         <div class="sidebar">
-            <nav>
-                <div class="sidebar-header">
-                    <h2 class="MENU btn-warning "><span>M</span>ENU</h2>
-                </div>
-                <ul class="links">
-                    <li><a href="#">home</a></li>
-                     <li><a href="https://tintyoga.com/" target="_blank">health and fitness</a></li>
-                    <li><a href="https://www.911.gov/" target="_blank">help</a></li>
-                    <li><a href="https://www.healthline.com/" target="_blank"> health tips</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="heading">
-            <h4 class="head">Welcome to Fitness Check!</h4>
-            <!-- <img src = "background-image.jpeg" class = "center" width = "300 height = "70/> -->
-        </div>
-        <div class ="calculator">
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <h3> Calculate your BMI</h3>
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <p> 
-                        <ul>
-                          <form name="bmicalculator">
-                            <table>
-                              <th>
-                                <tr>Your Weight(kg): </tr> <input type="number" name="weight" size="10"><br />
-                                <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
-                                <input type="button" value="Calculate BMI" onClick="CalculateBmi()"><br />
-                                <tr> BMI: </tr>  <input type="text" name="bmi" size="10"><br />
-                                This Means: <input type="text" name="meaning" size="25">
-                                <input type="reset" value="Reset" />
-                              </th>
-                            </table>
-                          </form>
-                        </ul>    
-                    </p>     
-                    <p>
-                    </div>
-                  </div>
-                </div>
+          <nav>
+            <div class="sidebar-header">
+              <h2 class="MENU btn-warning "><span>M</span>ENU</h2>
             </div>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h3 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <h3> Calculate your Body Fat Percentage</h3>
-                    </button>
-                  </h3>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            <form name="bfpcalculator">
-                                Your BMI: <input id="bfp-bmi" type="number" name="BMI"  size="10"><br />
-                                Your Age: <input type="number" name="age" size="10"><br />
-                                Your Gender: <li><input type= "radio" name = "m" id="gender-m" value="male" size="10"> Male<br /> </li>
-                                <li> <input type="radio" id="gender-f" name ="m" value= "female" size="10">Female<br /></li> 
-                                <input type="button" value="Calculate Body Fat Percentage" onClick="CalculateBodyFatPercentage()"><br />
-                                Your Body fat percentage: <input type="text" name="bfp" size="10"><br />
-                                This Means: <input type="text" name="meaning" size="25">
-                                <input type="reset" value="Reset" />
-                            </form>
-                        </p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-                
-
-
-            <h3> Your Summary</h3>
-               
-               <label>Body Mass Index</label>
-                       <input class="textbox" type = "number"
-                              id = "bodymass"
-                              value = "" /> kg<br>
-                              <label>Body Fat Percentage</label>
-                       <input class="textbox" type = "number"
-                              id = "bodyfat"
-                              value = "yourbfp" /> %<br><br>
-                </form>
- <script>
-        let movies = [];
-            ev.preventDefault();  
-            let movie = {
-                id: Date.now(),
-                title: document.getElementById('calc').value,
-                year: document.getElementById('reset').value
-            }
-            movies.push(movie);
-            document.forms[0].reset(); 
-            console.warn('added' , {movies} );
-            let pre = document.querySelector('#msg pre');
-            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
-
-            localStorage.setItem('MyMovieList', JSON.stringify(movies) );
-        
-        document.addEventListener('DOMContentLoaded', ()=>{
-            document.getElementById('btn').addEventListener('click', addMovie);
-        });
-    </script>
+            <ul class="links">
+              <li><a href="#">home</a></li>
+              <li><a href="https://tintyoga.com/" target="_blank">health and fitness</a></li>
+              <li><a href="https://www.911.gov/" target="_blank">help</a></li>
+              <li><a href="https://www.healthline.com/" target="_blank"> health tips</a></li>
             </ul>
+          </nav>
         </div>
+      </div>  
+      <div class="col">
+        <div class="heading">
+          <h4 class="head">Welcome to Fitness Check!</h4>
+          <!-- <img src = "background-image.jpeg" class = "center" width = "300 height = "70/> -->
+        </div>
+        <div class="calculator">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  <h3> Calculate your BMI</h3>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                  <ul>
+                    <form name="bmicalculator">
+                      <table>
+                        <th>
+                          <tr>Your Weight(kg): </tr> <input type="number" name="weight" size="10"><br />
+                          <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
+                          <input type="button" value="Calculate BMI" onClick="CalculateBmi()"><br />
+                          <tr> BMI: </tr> <input type="text" name="bmi" size="10"><br />
+                          This Means: <input type="text" name="meaning" size="25">
+                          <input type="reset" value="Reset" />
+                        </th>
+                      </table>
+                    </form>
+                  </ul>
+                  </p>
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  <h3> Calculate your Body Fat Percentage</h3>
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                  <form name="bfpcalculator">
+                    Your BMI: <input id="bfp-bmi" type="number" name="BMI" size="10"><br />
+                    Your Age: <input type="number" name="age" size="10"><br />
+                    Your Gender: <li><input type="radio" name="m" id="gender-m" value="male" size="10"> Male<br /> </li>
+                    <li> <input type="radio" id="gender-f" name="m" value="female" size="10">Female<br /></li>
+                    <input type="button" value="Calculate Body Fat Percentage" onClick="CalculateBodyFatPercentage()"><br />
+                    Your Body fat percentage: <input type="text" name="bfp" size="10"><br />
+                    This Means: <input type="text" name="meaning" size="25">
+                    <input type="reset" value="Reset" />
+                  </form>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3> Your Summary</h3>
+          <label>Body Mass Index</label>
+          <input class="textbox" type="number" id="bodymass" value="" /> kg<br>
+          <label>Body Fat Percentage</label>
+          <input class="textbox" type="number" id="bodyfat" value="yourbfp" /> %<br><br>
+          <script>
+    
+          </script>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col">
         <div class="add1">
           <ul>
             <li>Account</li>
-            <li>History </li> 
+            <li>History </li>
             <li>Sign in/ Sign out</li>
-            <li> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+            <li> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+            </li>
           </ul>
-         <div id="id01" class="modal"> 
-              <form class="modal-content animate" action="/action_page.php" method="post">
-                <div class="imgcontainer">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                  <img src="health.png" alt="Avatar" class="avatar">
-                </div>
-          <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-            
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-var modal = document.getElementById('id01');
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-  <div class= "add2">
-    <br>
-    <h3> Social Media</h3>
-    <center>
-      
+          <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+                <img src="health.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
     
-    <a href="http://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
-    <a href="http://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
-    <a href="http://www.google.com" target="_blank" class="fa fa-google"></a>
-    <a href="linkedin.com" target="_blank" class="fa fa-linkedin"></a>
-    <a href="http://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
-    <a href="http://www.instragram.com" target="_blank" class="fa fa-instagram"></a>
-  </center>
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+    
+                <button type="submit">Login</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+              </div>
+    
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+              </div>
+            </form>
+          </div>
+    
+          <div class="add2">
+            <br>
+            <h3> Social Media</h3>
+            <a href="http://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="http://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+            <a href="http://www.google.com" target="_blank" class="fa fa-google"></a>
+            <a href="linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+            <a href="http://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
+            <a href="http://www.instragram.com" target="_blank" class="fa fa-instagram"></a> 
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    <div class="footer">NOTE: This is for calculating normal health. Please call 911 for serious issue! <br>
-    </div>
-
-      
-   
-
+  <div class="footer">NOTE: This is for calculating normal health. Please call 911 for serious issue! <br> </div>
 </body>
 </html>
