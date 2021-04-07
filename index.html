@@ -7,7 +7,10 @@
     <title>Fitness</title>
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="login.css">
     <script src="bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="social.css">
 </head>
 
 <body>
@@ -26,8 +29,9 @@
                 </div>
                 <ul class="links">
                     <li><a href="#">home</a></li>
-                    <li><a href="#">health and fitness</a></li>
-                    <li><a href="#">help</a></li>
+                     <li><a href="https://tintyoga.com/" target="_blank">health and fitness</a></li>
+                    <li><a href="https://www.911.gov/" target="_blank">help</a></li>
+                    <li><a href="https://www.healthline.com/" target="_blank"> health tips</a></li>
                 </ul>
             </nav>
         </div>
@@ -106,6 +110,26 @@
                               id = "bodyfat"
                               value = "yourbfp" /> %<br><br>
                 </form>
+ <script>
+        let movies = [];
+            ev.preventDefault();  
+            let movie = {
+                id: Date.now(),
+                title: document.getElementById('calc').value,
+                year: document.getElementById('reset').value
+            }
+            movies.push(movie);
+            document.forms[0].reset(); 
+            console.warn('added' , {movies} );
+            let pre = document.querySelector('#msg pre');
+            pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
+
+            localStorage.setItem('MyMovieList', JSON.stringify(movies) );
+        
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('btn').addEventListener('click', addMovie);
+        });
+    </script>
             </ul>
         </div>
         <div class="add1">
@@ -113,23 +137,60 @@
                 <li>Account</li>
                 <li>History </li> 
                 <li>Sign in/ Sign out</li>
-            
-            </ul>
-            
-        </div>
+                
+                <h2>Login</h2>
 
-        <div class="add2"> 
-            
-        </div>
+ <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-        <div class="footer"></div>
-        <ul>
-            <li>Fitness Check</li>
-            <li>Copyright 2021, Fitness Check ltd</li>
-            <li></li>
-        </ul> 
+<div id="id01" class="modal"> 
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="health.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+        <div class="add2">
+<h3>Social Media</h3>
+<a href="http://www.facebook.com" class="fa fa-facebook"></a>
+<a href="http://www.twitter.com" class="fa fa-twitter"></a>
+<a href="http://www.google.com" class="fa fa-google"></a>
+<a href="linkedin.com" class="fa fa-linkedin"></a>
+<a href="http://www.youtube.com" class="fa fa-youtube"></a>
+<a href="http://www.instragram.com" class="fa fa-instagram"></a>
+</div>
+        <div class="footer">This is for calculating normal health. Please call 911 for serious issue!!!!!</div>
 
     </div>
+
+
 
 </body>
 </html>

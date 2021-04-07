@@ -91,9 +91,16 @@ td, th {
 }
 
 .add1{
-    background: rgb(206, 211, 206);
     grid-area: b4;
     align-items: center;
+     background: rgb(206, 211, 206);
+    display: block;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: rgb(22, 74, 122);
+    transition: all 0.3s linear;
+    cursor: pointer;
 }
 
 .add2{
@@ -102,8 +109,10 @@ td, th {
 }
 
 .footer{
-    background:rgb(49,64,78);
+  background:rgb(236, 75, 11);
     grid-area: b6;
+   font-size: x-large;
+   font-weight: 200;
 }
 
 
