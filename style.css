@@ -7,7 +7,7 @@
 }
 
 body{
-    background: rgb(184, 200, 211);
+    background: none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.5;
     padding-top: 1;
@@ -22,12 +22,12 @@ body{
 }
 
 .sidebar{
-    background: rgb(240, 230, 230);
+    background: rgb(241, 234, 234);
     grid-area: b1;
     }
 
 span{
-    color: rgb(187, 173, 173);
+    color: rgb(151, 28, 28);
 }
 
 .sidebar-header{
@@ -47,14 +47,14 @@ span{
 }
 
 .links a:hover{
-    background: rgb(189, 152, 74);
+    background: rgb(132, 130, 146);
     padding-left: 1.75rem;
 }
 
 .heading{
     font-size: 3.5rem;
     text-transform: capitalize;
-    background:rgb(127, 127, 128);
+    background: rgb(233, 241, 248);
     display: grid;
     place-items: center;
     align-items: center;
@@ -86,16 +86,16 @@ td, th {
 
 }
 .calculator:hover{
-    background: rgb(175, 173, 168);
+    background: rgb(203, 202, 204);
     
 }
 
 .add1{
     grid-area: b4;
     align-items: center;
-     background: rgb(206, 211, 206);
+    background:none;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
     color: rgb(22, 74, 122);
@@ -104,17 +104,20 @@ td, th {
 }
 
 .add2{
-    background: rgb(197, 224, 243);
     grid-area: b5;
+    font-size: small;
+    align-items: center;
+
 }
 
 .footer{
-  background:rgb(236, 75, 11);
+    background:rgb(233, 24, 17);
     grid-area: b6;
-   font-size: x-large;
-   font-weight: 200;
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: aliceblue;
+    align-items: center;
 }
-
 
 .container{
     width: 99%;

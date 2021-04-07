@@ -44,25 +44,25 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <h2> Calculate your BMI</h2>
+                    <h3> Calculate your BMI</h3>
                     </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body"><p>
-                        
-                            <form name="bmicalculator">
-                                <table>
-                                    <th>
-                                    <tr>Your Weight(kg): </tr> <input type="number" name="weight" size="10"><br />
-                                    <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
-                                    <input type="button" value="Calculate BMI" onClick="CalculateBmi()"><br />
-                                    <tr> BMI: </tr>  <input type="text" name="bmi" size="10"><br />
-                                    This Means: <input type="text" name="meaning" size="25">
-                                    <input type="reset" value="Reset" />
-                                </th>
-                                </table>
-                                
-                            </form>
+                    <div class="accordion-body">
+                      <p> 
+                        <ul>
+                          <form name="bmicalculator">
+                            <table>
+                              <th>
+                                <tr>Your Weight(kg): </tr> <input type="number" name="weight" size="10"><br />
+                                <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
+                                <input type="button" value="Calculate BMI" onClick="CalculateBmi()"><br />
+                                <tr> BMI: </tr>  <input type="text" name="bmi" size="10"><br />
+                                This Means: <input type="text" name="meaning" size="25">
+                                <input type="reset" value="Reset" />
+                              </th>
+                            </table>
+                          </form>
                         </ul>    
                     </p>     
                     <p>
@@ -72,11 +72,11 @@
             </div>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
+                  <h3 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <h2> Calculate your Body Fat Percentage</h2>
+                      <h3> Calculate your Body Fat Percentage</h3>
                     </button>
-                  </h2>
+                  </h3>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <p>
@@ -91,7 +91,6 @@
                                 <input type="reset" value="Reset" />
                             </form>
                         </p>
-                  
                     </div>
                   </div>
                 </div>
@@ -133,34 +132,30 @@
             </ul>
         </div>
         <div class="add1">
-            <ul>
-                <li>Account</li>
-                <li>History </li> 
-                <li>Sign in/ Sign out</li>
-                
-                <h2>Login</h2>
+          <ul>
+            <li>Account</li>
+            <li>History </li> 
+            <li>Sign in/ Sign out</li>
+            <li> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button></li>
+          </ul>
+         <div id="id01" class="modal"> 
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="health.png" alt="Avatar" class="avatar">
+                </div>
+          <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
 
- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal"> 
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="health.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
@@ -177,20 +172,26 @@ window.onclick = function(event) {
     }
 }
 </script>
-        <div class="add2">
-<h3>Social Media</h3>
-<a href="http://www.facebook.com" class="fa fa-facebook"></a>
-<a href="http://www.twitter.com" class="fa fa-twitter"></a>
-<a href="http://www.google.com" class="fa fa-google"></a>
-<a href="linkedin.com" class="fa fa-linkedin"></a>
-<a href="http://www.youtube.com" class="fa fa-youtube"></a>
-<a href="http://www.instragram.com" class="fa fa-instagram"></a>
-</div>
-  <div class="footer">This is for calculating normal health. Please call 911 for serious issue!!!!!</div>
-
+  <div class= "add2">
+    <br>
+    <h3> Social Media</h3>
+    <center>
+      
+    
+    <a href="http://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+    <a href="http://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+    <a href="http://www.google.com" target="_blank" class="fa fa-google"></a>
+    <a href="linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+    <a href="http://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
+    <a href="http://www.instragram.com" target="_blank" class="fa fa-instagram"></a>
+  </center>
+    </div>
+  </div>
+    <div class="footer">NOTE: This is for calculating normal health. Please call 911 for serious issue! <br>
     </div>
 
-
+      
+   
 
 </body>
 </html>
