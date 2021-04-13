@@ -45,16 +45,16 @@ function CalculateBmi() {
         document.getElementById("idw-bmi").value = finalBmi.toFixed(2)
         document.bmicalculator.bmi.value = finalBmi.toFixed(2)
         if(finalBmi <= 18.5){
-            document.bmicalculator.meaning.value = "That you are considered Underweight."
+            document.bmicalculator.meaning.value = "You are considered Underweight."
         }
         if(finalBmi > 18.5 && finalBmi <= 25){
-            document.bmicalculator.meaning.value = "That you are considered healthy."
+            document.bmicalculator.meaning.value = "You are considered healthy."
         }
         if(finalBmi > 25 && finalBmi <= 30){
-            document.bmicalculator.meaning.value = "That you are considered overweight."
+            document.bmicalculator.meaning.value = "You are considered overweight."
         }
         if(finalBmi > 30){
-            document.bmicalculator.meaning.value = "That you are considered obese."
+            document.bmicalculator.meaning.value = "You are considered obese."
         }
     }
     else{
@@ -78,15 +78,23 @@ function CalculateBodyFatPercentage(){
     if (finalbfp<8){
         document.bfpcalculator.meaning.value = "Your Body Fat Percentage is considered low"
     }
-    if( finalbfp > 8 && finalbfp < 19 ){
-        document.bfpcalculator.meaning.value = "Your body fat percentage is considerd healthy "
+    if( finalbfp > 8 && finalbfp < 17 && gender== "male" ){
+        document.bfpcalculator.meaning.value = "Yay! You have healthy body fat percentage"
     }
-    if( finalbfp > 19){
-        document.bfpcalculator.meaning.value = "Your body fat percentage is considered high "
+    if( finalbfp > 17 && gender== "male" ){
+        document.bfpcalculator.meaning.value = "Your body fat percentage considered higher"
     }
 
-    
+    if( finalbfp > 8 && finalbfp < 25 && gender == "female" ){
+        document.bfpcalculator.meaning.value = "Yay! You have healthy body fat percentage"
+    }
+    if( finalbfp > 25 && gender== "female" ){
+        document.bfpcalculator.meaning.value = "Your body fat percentage considered higher "
+    }  
 }
+// to concatinate use "+"  sign
+    
+
 document.getElementById("bodyfat").value =finalBmi.toFixed(2)
 
 var finalweight

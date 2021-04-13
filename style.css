@@ -16,13 +16,17 @@ body{
 }
 .text{
     /* background-color: aliceblue; */
-    text-align: center;
-    text-transform: capitalize;
+    text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 2em;
     color: blue;
 }
+.calc-title{
+    font-size:1.6em;
+    color: rgb(39, 95, 247);
 
+
+}
 .sidebar{
     /* background: rgb(255, 169, 98); */
     /* background-image: url(background-image-.jpeg); */
@@ -38,11 +42,13 @@ span{
     text-align: center;
     text-transform: capitalize;
     color: rgb(29,41,54);
+    
 }
 .sidebar-header2{
     text-align: center;
-    text-transform: capitalize;
-    color: rgb(29,41,54);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 1rem 1.5rem;
 }
 
 .links a{
@@ -53,6 +59,7 @@ span{
     color: rgb(22, 74, 122);
     transition: all 0.3s linear;
     cursor: pointer;
+    text-align: left;
 }
 
 .links a:hover{
