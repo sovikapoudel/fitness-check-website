@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fitness</title>
+  <title>Fitness Check</title>
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="login.css">
@@ -34,12 +34,28 @@
               <li><a href="https://www.911.gov/" target="_blank">help</a></li>
               <li><a href="https://www.healthline.com/" target="_blank"> health tips</a></li>
             </ul>
+
+          <h3 class="sidebar-header2"> Your Summary</h3>
+          <table>
+          <tr>
+            <td><label>Body Mass Index</label></td> <br>
+            <td><input class="textbox" type="number" id="bodymass" value="" /> kg<br></td>
+          </tr>
+          <tr>
+            <td><label>Body Fat Percentage</label></td>
+          <td><input class="textbox" type="number" id="bodyfat" value="" /> %</td>
+        </tr>
+        <tr>
+          <td><label>Ideal Body Weight</label></td>
+          <td> <input class="textbox" type="number" id="bodyweight" value="" /> kg </td>
+        </tr>
+          </table>
           </nav>
         </div>
       </div>  
       <div class="col">
         <div class="heading">
-          <h4 class="head">Welcome to Fitness Check!</h4>
+          <h3 class="heading">Welcome to Fitness Check!</h3>
           <!-- <img src = "background-image.jpeg" class = "center" width = "300 height = "70/> -->
         </div>
         <div class="calculator">
@@ -90,8 +106,8 @@
                   <form name="bfpcalculator">
                     Your BMI: <input id="bfp-bmi" type="number" name="BMI" size="10"><br />
                     Your Age: <input type="number" name="age" size="10"><br />
-                    Your Gender: <li><input type="radio" name="m" id="gender-m" value="male" size="10"> Male<br /> </li>
-                    <li> <input type="radio" id="gender-f" name="m" value="female" size="10">Female<br /></li>
+                    Your Gender: <li><input type="radio" name="m" value="male" size="10"> Male<br /> </li>
+                    <li> <input type="radio" name="m" value="female" size="10">Female<br /></li>
                     <input type="button" value="Calculate Body Fat Percentage" onClick="CalculateBodyFatPercentage()"><br />
                     Your Body fat percentage: <input type="text" name="bfp" size="10"><br />
                     This Means: <input type="text" name="meaning" size="25">
@@ -102,15 +118,42 @@
               </div>
             </div>
           </div>
-          <h3> Your Summary</h3>
-          <label>Body Mass Index</label>
-          <input class="textbox" type="number" id="bodymass" value="" /> kg<br>
-          <label>Body Fat Percentage</label>
-          <input class="textbox" type="number" id="bodyfat" value="yourbfp" /> %<br><br>
-          <script>
-    
-          </script>
-          </ul>
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  <h3> Calculate your Ideal Weight</h3>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <p>
+                  <ul>
+                    <form name="idwcalculator">
+                      <table>
+                        <th>
+                          <tr>Your BMI: <input id="idw-bmi" type="number" name="BMI" size="10"><br />
+                          <tr>Your Height(cm)</tr>: <input type="number" name="height" size="10"><br />
+                          Your Gender: <li><input type="radio" name="m" value="male" size="10"> Male<br /> </li>
+                          <li> <input type="radio" name="m" value="female" size="10">Female<br /></li>
+                          <input type="button" value="Calculate Ideal Weight" onClick="calculateidealweight()"><br />
+                          <tr> Ideal Weight: </tr> <input type="text" name="idw" size="10"><br />
+                          <input type="text" name="meaning" size="25">
+                          <input type="reset" value="Reset" />
+                        </th>
+                      </table>
+                    </form>
+                  </ul>
+                  </p>
+                  <p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
         </div>
 
       </div>
