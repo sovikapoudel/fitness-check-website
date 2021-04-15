@@ -183,6 +183,52 @@
       </div>
           </div>
             </ul>
+            <li>Account</li>
+            <li>History </li>
+            <li>Sign in/ Sign out</li>
+            <li> <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+              <li> <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>
+            </li>
+          </ul>
+          <div id="id02" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+                <img src="health.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                <label for="uname"><b>First Name</b></label>
+                <input type="text" placeholder="Enter Fname" name="Fname" required>
+
+                <label for="uname"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Lname" name="Lname" required>
+                
+                <label for="psw"><b>Email ID</b></label>
+                <input type="text" placeholder="Email Id" name="Email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <p>Birthday</p>
+            <li>
+                <select><option>Day</option></select>
+                <select><option>Month</option></select>
+                <select><option>Year</option></select>
+                <a href="">Why do I need to provide my date of birth?</a>
+            </li>
+            <button type="submit">Signup</button>
+              </div>
+    
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                  class="cancelbtn">Cancel</button>
+              
+              </div>
+            </form>
+          </div>
+           
+              
+              
           <div id="id01" class="modal">
             <form class="modal-content animate" action="/action_page.php" method="post">
               <div class="imgcontainer">
@@ -217,3 +263,15 @@
 
 </body>
 </html>
+<?php
+extract($_REQUEST);
+$file-fopen("form-save.txt","a");
+
+fwrite($file,"uname: ");
+fwrite($file,$username. "\n" );
+fwrite($file,"Email: ");
+fwrite($file,$Email.  "\n");
+fwrite($file,"psw: ");
+fwrite($file,$Password. "\n");
+fclose($file)
+?>
