@@ -9,31 +9,16 @@ function getgender(){
 }
 
 
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+  }
 var finalBmi
-// function CalculateBodyFatPercentage(){
-// var age = document.bfpcalculator.age.value
-//     //  var gender = document.bfpcalculator.gender.value
-//     if (age>0 ); 
-//     // && gender==male or female (need to add this part)
-//         finalbfp = 1.20*finalBmi+(0.23*age)-16.2
-//         // this calculation is for male
-//         document.bfpcalculator.bfp.value = finalbfp
-
-//             if( finalbfp > 8 && finalbfp < 19 ){
-//                 document.bfpcalculator.meaning.value = "Your body fat percentage is too low "
-//             }
-//             if( finalbfp > 19 && finalbfp <25 ){
-//                 document.bfpcalculator.meaning.value = "Your body fat percentage is considered normal "
-//             }
-//             if( finalbfp >25 ){
-//                 document.bfpcalculator.meaning.value = "Your body fat percentage is considered high "  
-//             }
-
-//     else{
-//                 alert("Please provide the correct information!");
-//             }
-
-//     }
 
 function CalculateBmi() {
     var weight = document.bmicalculator.weight.value
@@ -146,3 +131,6 @@ if (event.target == modal) {
 modal.style.display = "none";
 }
 }
+
+
+
