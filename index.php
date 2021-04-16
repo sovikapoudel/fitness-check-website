@@ -1,7 +1,7 @@
 <?php
 session_start();
   include("connection.php");
-    include("function.php");
+    include("functions.php");
 
     $user_data= check_login($con); /* check_login($con) is a finction and is in function.php*/
 
@@ -14,9 +14,9 @@ session_start();
    </head>
    <body>
      <a href="logout.php"></a>
-     <h1>This is a index page</h1>
+     <h1>Database try</h1>
      <br>
-     hello,username.
+    
 
    </body>
  </html>
