@@ -1,6 +1,5 @@
-
 .fa {
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
   width: 50px;
   text-align: center;
@@ -11,35 +10,32 @@
 .fa:hover {
     opacity: 0.7;
     background-color: rgb(241, 241, 241);
+    color: rgb(23, 24, 23);
 }
 
 .fa-facebook {
-  color: rgb(145, 132, 132);
+  color: rgba(59, 89, 152);
   
 }
 
 .fa-twitter {
-  color: rgb(145, 132, 132);
+  color: rgb(0, 172, 238);
 }
 
 .fa-google {
-  color: rgb(145, 132, 132);
+  color: rgb(219, 50, 54);
 }
 
 .fa-linkedin {
-  color: rgb(145, 132, 132);
+  color: rgb(14, 118, 168);
 }
 
 .fa-youtube {
-  color: rgb(145, 132, 132);
+  color: rgb(255, 0, 0);
 }
 
 .fa-instagram {
-  color: rgb(145, 132, 132);
+  color: rgb(205, 72, 107);
 }
 
-.fa-rss {
-  background: #ff6600;
-  color: white;
-}
 

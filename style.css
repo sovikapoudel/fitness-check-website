@@ -68,12 +68,13 @@ span{
 .links a:hover{
     background: rgb(210, 209, 218);
     padding-left: 1.5rem;
+    color: #fff;
 }
 .add2:hover {
-    background: rgb(155, 152, 152);
+    background: rgb(210, 209, 218);
+    color: #fff;
     padding-left: 1rem;
     display: block;
-    opacity: 1
   
 }
 .heading{
