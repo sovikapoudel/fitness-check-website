@@ -1,7 +1,7 @@
 // alert("Please Click 'OK' to continue");
 var gender
 function getgender(){
-    var gen = document.getElementsByName("m");
+    var gen = document.getElementsByName("gendername");
     for(i=0; i<gen.length; i++){
         if (gen[i].checked)
             gender= gen[i].value
@@ -9,15 +9,7 @@ function getgender(){
 }
 
 
-function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-  }
+
 var finalBmi
 
 function CalculateBmi() {
@@ -84,7 +76,7 @@ document.getElementById("bodyfat").value =finalBmi.toFixed(2)
 
 var finalweight
 function calculateidealweight() {
-    var height= document.idwcalculator.height.value
+    var height = document.bmicalculator.height.value
     getgender()
     if (height>0) {
 
@@ -105,32 +97,4 @@ function calculateidealweight() {
     }
 }
 document.getElementById("bodyweight").value=finalweight.toFixed(2)
-
-
-let movies = [];
-ev.preventDefault();  
-let movie = {
-    id: Date.now(),
-    title: document.getElementById('calc').value,
-    year: document.getElementById('reset').value
-}
-movies.push(movie);
-document.forms[0].reset(); 
-console.warn('added' , {movies} );
-let pre = document.querySelector('#msg pre');
-pre.textContent = '\n' + JSON.stringify(movies, '\t', 2);
-
-localStorage.setItem('MyMovieList', JSON.stringify(movies) );
-
-document.addEventListener('DOMContentLoaded', ()=>{
-document.getElementById('btn').addEventListener('click', addMovie);
-});
-var modal = document.getElementById('id01');
-window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
-}
-}
-
-
 

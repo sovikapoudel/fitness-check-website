@@ -1,14 +1,32 @@
 *{
     box-sizing: boarder-box;
+   
+}
+.aboutus{
+    background: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(17, 15, 15);
+    line-height: 2;
+    padding-top: 2;
+    background-position:unset;
+    background-image: url(background-image-1.jpeg);
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    width:80%;
+    margin-top: 2rem;
 }
 .back-img{
     background: none;
     font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(75, 75, 80);
+    color: rgb(17, 15, 15);
     line-height: 1;
     padding-top: 1;
     background-position:unset;
+    background-color: rgb(230, 227, 200);
     align-items: center;
     text-align: center;
     box-sizing: border-box;
@@ -18,7 +36,7 @@ body {
     font-size: 10px;
     font-weight: 100;
     line-height: 24px;
-    color: #5d5d5d;
+    color: #161414;
 }
 .column {
     float:none;
@@ -29,13 +47,4 @@ body {
   }
   
   /* Clear floats after the columns */
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
-
-.team-hover {
-    background-color: rgba(255,255,255,.7);
-}
 
