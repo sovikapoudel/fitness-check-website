@@ -1,7 +1,7 @@
 <?php
-$dbhost="localhost";
+$dbhost="84-FD-D1-E4-1A24";
 $dbuser="root";
-$dbpass="";
+$dbpass="12345";
 $dbname="login_sample_db"; /* database name*/
 
 /*connect to database*/

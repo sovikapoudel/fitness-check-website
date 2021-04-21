@@ -1,9 +1,47 @@
 <?php
+session_start();
+  // include("connection.php");
+    include("functions.php");
+
+    if ($_SERVER['REQUEST_METHOD']== "POST")
+     {
+      // if we post something
+      $user_name=$_POST['user_name'];
+      $password=$_POST['password'];
+
+      if (!empty ($user_name) && !empty ($password) && !is_numeric ($user_name))
+       {
+         //read from the database
+         $user_id=random_num(20);
+          $query ="select * from users where user_name= '$user_name' limit 1";
+          $result= mysqli_query($con, $query); //to save
+
+          if ($result)
+          {
+            if ($result && mysqli_num_rows($result) > 0)
+             {
+               $user_data=mysqli_fetch_assoc($result);
+              if($user_data['password']===$password)
+              {
+                $_SESSION['user_id']= $user_data['user_id'];
+                header("Location: index.php");// redirect the user in login.php
+               die;
+              }
+            }
+          }
+
+            echo "The username and password provided is not corret. Please try again later.";
+
+      }else {
+        echo "Please enter valid info";
+      }
+    }
 
  ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
+     <link rel="stylesheet" href="style.css">
      <meta charset="utf-8">
      <title>login</title>
    </head>
@@ -31,17 +69,17 @@
       }
 
     </style>
-    <div id="box">
+    <div class= "add1" id="box">
 
       <form method="post">
-        <div style="font-size: 20px; margin:10px;color:white;">Login</div>
+        <div style="font-size: 20px; color:white;">Please enter username and password to login</div>
 
         <input id="text" type="text" name="user_name"><br><br>
           <input id="text" type="password" name="password"><br><br>
 
           <input id="button" type="submit" value="Login"><br><br>
 
-          <a href="signup.php ">Click To Signup</a>
+          <a class="add2" href="signup.php ">New user? <br> Click To Signup</a>
 
       </form>
 
