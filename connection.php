@@ -1,5 +1,5 @@
 <?php
-$dbhost="84-FD-D1-E4-1A24";
+$dbhost="localhost";
 $dbuser="root";
 $dbpass="12345";
 $dbname="login_sample_db"; /* database name*/

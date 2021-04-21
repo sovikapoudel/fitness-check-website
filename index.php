@@ -1,6 +1,6 @@
 <?php
 session_start();
-// include("connection.php");
+include("connection.php");
 include("functions.php");
 
     $user_data= check_login($con); /* check_login($con) is a finction and is in function.php*/
