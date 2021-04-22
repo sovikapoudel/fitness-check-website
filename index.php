@@ -200,10 +200,6 @@ include("functions.php");
              <button type="submit">Signup</button>
                </div>
 
-               <div class="container" style="background-color:#f1f1f1">
-                 <button type="button" onclick="document.getElementById('id02').style.display='none'"
-                   class="cancelbtn">Cancel</button>
-
                </div>
              </form>
            </div>
