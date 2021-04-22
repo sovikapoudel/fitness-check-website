@@ -8,10 +8,7 @@ function getgender(){
     }
 }
 
-
-
 var finalBmi
-
 function CalculateBmi() {
     var weight = document.bmicalculator.weight.value
     var height = document.bmicalculator.height.value

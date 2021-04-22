@@ -88,7 +88,7 @@ span{
     
     
 }
-table{
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -103,13 +103,20 @@ td, th {
 
     
 }
-.textbox{
-    background-size: 1rem;
-    box-sizing:border-box;
-    border-collapse:separate;
+
+.input-group-text {
+    width: 170px;
+    flex-shrink: 0;
 }
 
-.calculator{
+.textbox {
+    flex-grow: 1;
+    flex-basis: content;
+    font-size: 12px;
+    text-align: center;
+}
+
+.calculator {
     display: block;
     background: none;
     font-size: 1.2rem;
@@ -168,4 +175,61 @@ td, th {
 
 .btn-warning:hover {
     background-color:rgb(156, 151, 151);
-  }
+}
+
+.news-row + .news-row {
+    margin-top: 10px;
+}
+
+.news-card {
+    height: 80px;
+}
+
+.news-card .card-body {
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0;
+}
+
+.news-image {
+    flex-basis: 30%;
+    overflow-x: hidden;
+    flex-shrink: 0;
+}
+
+.news-image img {
+    max-height: 100%;
+    width: auto;
+}
+
+.news-description {
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 12px !important;
+    color: black !important;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-description p {
+    margin: 0;
+}
+
+.news-read-more {
+    font-family: sans-serif;
+    font-size: 9px !important;
+    text-decoration: none;
+    color: #404040;
+}
+
+.news-read-more:hover {
+    color: #737373;
+}
+
+nav a {
+    text-decoration: none;
+}

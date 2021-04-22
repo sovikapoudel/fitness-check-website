@@ -21,7 +21,7 @@
   <!-- <script type ="text/javascript" src="web.js"></script> -->
   <div class="container-fluid content-container">
     <div class="row"> 
-      <div class="col">
+      <div class="col col-3">
         <div class="sidebar">
           <nav>
             <div class="sidebar-header">
@@ -35,28 +35,25 @@
               <li><a href="aboutus.html" target="_blank"> About US</a></li>
             </ul>
             <p>
-              <br>
-              <table>
-                <h3 class="sidebar-header2"> Your Summary</h3>
-                <tr>
-                  <td><label>Body Mass Index</label></td> <br>
-                  <td><input class="textbox" type="number" id="bodymass" value="" /> kg<br></td>
-                </tr>
-                <tr>
-                  <td><label>Body Fat Percentage</label></td>
-                  <td><input class="textbox" type="number" id="bodyfat" value="" /> %</td>
-                </tr>
-                <tr>
-                  <td><label>Ideal Body Weight</label></td>
-                  <td> <input class="textbox" type="number" id="bodyweight" value="" /> kg </td>
-                </tr>
-              </table>
+              <h3 class="sidebar-header2"> Your Summary</h3>
+              <div class="input-group mb-1 d-flex">
+                <span class="input-group-text">Body Mass Index</span>
+                <input class="textbox" type="number" id="bodymass" value=""/>
+              </div>
+              <div class="input-group mb-1 d-flex">
+                <span class="input-group-text">Body Fat Percentage</span>
+                <input class="textbox" type="number" id="bodyfat" value=""/>
+              </div>
+              <div class="input-group mb-1 d-flex">
+                <span class="input-group-text">Ideal Body Weight</span>
+                <input class="textbox" type="number" id="bodyweight" value=""/>
+              </div>
               <br>
             </p>
           </nav>
         </div>
       </div>  
-      <div class="col">
+      <div class="col col-5">
         <div class="heading">
           <h3 class="heading">Welcome to Fitness Check!</h3>
           <!-- <img src = "background-image.jpeg" class = "center" width = "300 height = "70/> -->
@@ -158,28 +155,83 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="add1">
-          <ul>
-            <li class="add2">Account</li><br>
-            <li class="add2">History </li><br>
-            </li> 
-            <li> <button class = "btn-secondary" onclick="window.open('login.php', '_self')"> Login </button></li>
-            <li> <button class = "btn-secondary" onclick="window.open('signup.php', '_self')" >Sign Up</button>
-          </ul>
-          <div> <a href="http://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
-            <a href="http://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
-            <a href="http://www.google.com" target="_blank" class="fa fa-google"></a>
-            <a href="linkedin.com" target="_blank" class="fa fa-linkedin"></a>
-            <a href="http://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
-            <a href="http://www.instragram.com" target="_blank" class="fa fa-instagram"></a></div>
+      <div class="col col-4">
+        <div class="container-fluid">
+          <div class=row>
+            <div class=col>
+              <div class="add1">
+                <ul style="padding:0">
+                  <li class="add2">Account</li><br>
+                  <li class="add2">History </li><br>
+                  </li> 
+                  <li> <button class = "btn-secondary" onclick="window.open('login.php', '_self')"> Login </button></li>
+                  <li> <button class = "btn-secondary" onclick="window.open('signup.php', '_self')" >Sign Up</button>
+                </ul>
+                <div>
+                  <center>
+                    <a href="http://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+                    <a href="http://www.twitter.com" target="_blank" class="fa fa-twitter"></a>
+                    <a href="http://www.google.com" target="_blank" class="fa fa-google"></a>
+                    <a href="linkedin.com" target="_blank" class="fa fa-linkedin"></a>
+                    <a href="http://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
+                    <a href="http://www.instragram.com" target="_blank" class="fa fa-instagram"></a>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <h5 style="margin-bottom: 12px;"> Featured Articles</h5>
+          <div class="row news-row">
+            <div class="col">
+              <div class="card news-card">
+                <div class="card-body">
+                  <div class="news-image">
+                    <img src="news1 (2).jpg">
+                  </div>
+                  <div class=news-description>
+                    <p class="card-text">10 BEST FOODS TO CONTROL BLOOD SUGAR. <br> Here’s a list of the top 10 foods to control blood sugar.</p>
+                    <p><a class="news-read-more" href="https://www.muscleandfitness.com/nutrition/healthy-eating/10-best-foods-to-control-blood-sugar/"target="_blank">READ MORE...</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row news-row">
+            <div class="col">
+              <div class="card news-card">
+                <div class="card-body">
+                  <div class="news-image">
+                    <img src="news1 (1).jpg">
+                  </div>
+                  <div class=news-description>
+                    <p class="card-text">THESE HEALTHY-EATING TIPS HELP YOU STAY LEAN & RIPPED. <br> Pay attention to these top micronutrients</p>
+                    <p><a class="news-read-more" href="https://www.muscleandfitness.com/nutrition/performance-nutrition/8-micronutrients-important-for-performance-and-where-to-get-them/" target="_blank">READ MORE...</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row news-row">
+            <div class="col">
+              <div class="card news-card">
+                <div class="card-body">
+                  <div class="news-image">
+                    <img src="news3.jpg">
+                  </div>
+                  <div class=news-description>
+                    <p class="card-text">FIT FOR THE HOLIDAYS: NUTRITION <br>Steer Clear of Processed Carbohydrates </p>
+                    <p><a class="news-read-more" href="https://www.muscleandfitness.com/nutrition/healthy-eating/fit-holidays-nutrition/" target="_blank">READ MORE...</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-     </div>
+      </div>
     </div>
   </div>
   <div class="footer"><br>NOTE: This is for calculating normal health. Please call 911 for serious issue! </h5></div>
-
 </body>
 </html>
 
